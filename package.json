@@ -1,0 +1,82 @@
+{
+  "name": "dsh-plugin-claude-theme",
+  "version": "1.0.0",
+  "description": "Claude web-UI look for the DeepSeek Harness GUI: Anthropic's warm ivory and terracotta palette, plus Claude's editorial-serif transcript, applied as one theme token override layer.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "dsh-client-plugin",
+    "deepseek-harness",
+    "theme",
+    "claude",
+    "anthropic"
+  ],
+  "license": "MIT",
+  "author": "Nyaruko30",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nyaruko306/dsh-plugin-claude-theme.git"
+  },
+  "homepage": "https://github.com/Nyaruko306/dsh-plugin-claude-theme#readme",
+  "bugs": {
+    "url": "https://github.com/Nyaruko306/dsh-plugin-claude-theme/issues"
+  },
+  "type": "module",
+  "icon": "./assets/icon.svg",
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "scripts",
+    "tokens.mjs",
+    "cordis.patch.yml",
+    "locale",
+    "assets",
+    "docs",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "verify": "node scripts/verify.mjs",
+    "specimen": "node scripts/specimen.mjs",
+    "capture": "node scripts/capture-figures.mjs",
+    "prepublishOnly": "node scripts/build.mjs && node scripts/check.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": ">=3.18.4"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  }
+}

@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>dsh-plugin-claude-theme — typography specimen</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Anthropic Sans", "Anthropic Sans Variable", "Styrene B", "Styrene A", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; display: flex; align-items: stretch; }
+.panel { flex: 1; padding: 26px 30px; min-height: 100vh;
+         background: var(--dsw-alias-bg-base); color: var(--dsw-alias-label-primary); }
+
+.light {
+  --dsw-static-neutral-bluish-50: #FAF9F5;
+  --dsw-static-neutral-bluish-60: #F5F4ED;
+  --dsw-static-neutral-bluish-75: #F0EEE6;
+  --dsw-static-neutral-bluish-100: #EBE9E0;
+  --dsw-static-neutral-bluish-150: #E8E6DC;
+  --dsw-static-neutral-bluish-200: #E3E1D7;
+  --dsw-static-neutral-bluish-300: #DAD9D4;
+  --dsw-static-neutral-bluish-400: #B0AEA5;
+  --dsw-static-neutral-bluish-500: #9C9A92;
+  --dsw-static-neutral-bluish-600: #87867F;
+  --dsw-static-neutral-bluish-700: #73726C;
+  --dsw-static-neutral-bluish-750: #5E5D59;
+  --dsw-static-neutral-bluish-800: #3D3D3A;
+  --dsw-static-neutral-bluish-850: #2E2D2B;
+  --dsw-static-neutral-bluish-875: #262624;
+  --dsw-static-neutral-bluish-900: #1F1E1D;
+  --dsw-static-neutral-bluish-950: #141413;
+  --dsw-static-neutral-bluish-1000: #0F0E0D;
+  --dsw-static-neutral-bluish-00: #FFFFFF;
+  --dsw-static-neutral-50: #FAF9F5;
+  --dsw-static-neutral-100: #F5F4ED;
+  --dsw-static-neutral-150: #F2F0E8;
+  --dsw-static-neutral-200: #EBE9E0;
+  --dsw-static-neutral-250: #E3E1D7;
+  --dsw-static-neutral-300: #DAD9D4;
+  --dsw-static-neutral-400: #B0AEA5;
+  --dsw-static-neutral-500: #9C9A92;
+  --dsw-static-neutral-550: #8F8E86;
+  --dsw-static-neutral-600: #87867F;
+  --dsw-static-neutral-700: #55544E;
+  --dsw-static-neutral-800: #30302E;
+  --dsw-static-neutral-850: #1F1E1D;
+  --dsw-static-neutral-900: #141413;
+  --dsw-static-neutral-1000: #000000;
+  --dsw-static-neutral-00: #FFFFFF;
+  --dsw-static-deepseek-50: #FBF1EC;
+  --dsw-static-deepseek-100: #F7E3DA;
+  --dsw-static-deepseek-200: #F0CDBD;
+  --dsw-static-deepseek-300: #E8B39C;
+  --dsw-static-deepseek-400: #E0876A;
+  --dsw-static-deepseek-450: #DD8062;
+  --dsw-static-deepseek-500: #D97757;
+  --dsw-static-deepseek-600: #C6613F;
+  --dsw-static-deepseek-800: #8A4130;
+  --dsw-static-deepseek-900: #6B3226;
+  --dsw-static-deepseek-700-delete: #B0523A;
+  --dsw-static-blue-50: #FBF1EC;
+  --dsw-static-blue-75: #F7E7DE;
+  --dsw-static-blue-100: #F2D8CB;
+  --dsw-static-blue-300: #E8B39C;
+  --dsw-static-blue-400: #E0876A;
+  --dsw-static-blue-450: #DD8062;
+  --dsw-static-blue-500: #D97757;
+  --dsw-static-blue-600: #C6613F;
+  --dsw-static-blue-800: #8A4130;
+  --dsw-static-blue-900: #6B3226;
+  --dsw-static-blue-950: #3A1F14;
+  --dsw-static-blue-50p: #FBF1EC;
+  --dsw-alias-bg-base: #FAF9F5;
+  --dsw-alias-bg-layer-1: #FFFFFF;
+  --dsw-alias-bg-layer-2: #FFFFFF;
+  --dsw-alias-bg-layer-3: #FFFFFF;
+  --dsw-alias-bg-overlay: #FFFFFF;
+  --dsw-alias-bg-module-platform: #F5F4ED;
+  --dsw-alias-bg-multi-select: #F5F4ED;
+  --dsw-alias-bg-skeleton: rgba(31, 30, 29, 0.06);
+  --dsw-alias-bg-document-preview: #E8E6DC;
+  --dsw-alias-label-document-preview: #3D3D3A;
+  --dsw-alias-bg-document-selection: color-mix(in srgb, #D97757 35%, transparent);
+  --dsw-alias-bg-mask-1: rgba(20, 20, 19, 0.24);
+  --dsw-alias-bg-mask-2: rgba(20, 20, 19, 0.12);
+  --dsw-alias-bg-mask-3: rgba(20, 20, 19, 0.48);
+  --dsw-alias-bg-mask-photo: rgba(20, 20, 19, 0.88);
+  --dsw-alias-bg-mask-drop: rgba(250, 249, 245, 0.70);
+  --dsw-alias-border-l1: rgba(31, 30, 29, 0.08);
+  --dsw-alias-border-l2: rgba(31, 30, 29, 0.16);
+  --dsw-alias-border-l2-darkmode-thin: rgba(31, 30, 29, 0.16);
+  --dsw-alias-border-l3: rgba(31, 30, 29, 0.28);
+  --dsw-alias-border-l4: rgba(31, 30, 29, 0.40);
+  --dsw-alias-border-inverted: transparent;
+  --dsw-alias-border-inverted2: transparent;
+  --dsw-alias-brand-primary: #C6613F;
+  --dsw-alias-brand-primary-invert: #141413;
+  --dsw-alias-brand-text: #141413;
+  --dsw-alias-brand-primary-new-colorprimary-new-color: #D97757;
+  --dsw-alias-state-business-primary: #D97757;
+  --dsw-alias-state-business-tertiary: #F7E3DA;
+  --dsw-alias-link: #C6613F;
+  --dsw-alias-label-primary: #141413;
+  --dsw-alias-label-primary-dimmed: #1F1E1D;
+  --dsw-alias-label-primary-bluish: #141413;
+  --dsw-alias-label-primary-foreground: #FFFFFF;
+  --dsw-alias-label-primary-inverted: #FAF9F5;
+  --dsw-alias-label-secondary: #3D3D3A;
+  --dsw-alias-label-tertiary: #73726C;
+  --dsw-alias-label-caption: #9C9A92;
+  --dsw-alias-label-dimmed: #DEDCD1;
+  --dsw-alias-label-shimmer: color-mix(in srgb, #141413 30%, transparent);
+  --dsw-alias-label-deep-diving: color-mix(in srgb, #D97757 70%, #4A2A20);
+  --dsw-alias-label-deep-diving-shimmer: color-mix(in srgb, #D97757 30%, #4A2A20);
+  --dsw-alias-button-contrast-fill: #30302E;
+  --dsw-alias-button-elevated-fill: #FFFFFF;
+  --dsw-alias-button-floating-fill: #FFFFFF;
+  --dsw-alias-button-floating-hover: #F0EEE6;
+  --dsw-alias-button-ghost-active-border: #B0AEA5;
+  --dsw-alias-button-ghost-active-fill: #EBE9E0;
+  --dsw-alias-button-ghost-active-hover: #F0EEE6;
+  --dsw-alias-button-info-fill: #D97757;
+  --dsw-alias-button-info-hover: #C6613F;
+  --dsw-alias-button-primary-dimmed: #F0EEE6;
+  --dsw-alias-button-primary-fill: #C6613F;
+  --dsw-alias-button-primary-hover: #B0523A;
+  --dsw-alias-button-tool-bar-fill: rgba(48, 48, 46, 0.50);
+  --dsw-alias-button-tool-bar-fill-invisible: rgba(31, 31, 31, 0.36);
+  --dsw-alias-button-tool-bar-hover: rgba(48, 48, 46, 0.60);
+  --dsw-alias-interactive-bg-hover: rgba(31, 30, 29, 0.05);
+  --dsw-alias-interactive-bg-hover-solid: #F0EEE6;
+  --dsw-alias-interactive-bg-hover-accent: rgba(217, 119, 87, 0.14);
+  --dsw-alias-interactive-bg-hover-danger: rgba(180, 35, 31, 0.05);
+  --dsw-alias-interactive-bg-active: rgba(31, 30, 29, 0.10);
+  --dsw-menu-surface-fill: rgba(250, 249, 245, 0.94);
+  --dsw-alias-menu-group-header-fill: rgba(250, 249, 245, 0.94);
+  --dsw-specific-menu: rgba(250, 249, 245, 0.94);
+  --dsw-alias-menu-icon: #3D3D3A;
+  --dsw-alias-tooltip-bg: #262624;
+  --dsw-alias-tooltip-key-bg: color-mix(in srgb, #262624, white 18%);
+  --dsw-alias-toast-bg: #30302E;
+  --dsw-alias-toast-label: #FAF9F5;
+  --dsw-alias-switch-thumb: #FFFFFF;
+  --dsw-alias-turn-trigger-bg: #F5F4ED;
+  --dsw-alias-turn-trigger-bg-hover: rgba(31, 30, 29, 0.05);
+  --dsw-alias-markdown-code-block: #F5F4ED;
+  --dsw-alias-markdown-code-block-banner: #F0EEE6;
+  --dsw-alias-markdown-code-segment-selected: #FFFFFF;
+  --dsw-alias-markdown-code-segment-unselected: #F5F4ED;
+  --dsw-alias-markdown-inline-code: #F0EEE6;
+  --dsw-alias-markdown-citation: #E8E6DC;
+  --dsw-alias-markdown-placeholder: #F5F4ED;
+  --dsw-alias-markdown-tag: #F0EEE6;
+  --dsw-alias-scrollbar-bg-l1: #DAD9D4;
+  --dsw-alias-scrollbar-bg-l2: #DAD9D4;
+  --dsw-alias-scrollbar-hover-l1: #C2C0B6;
+  --dsw-alias-scrollbar-hover-l2: #C2C0B6;
+  --dsw-alias-state-error-primary: #B4231F;
+  --dsw-alias-state-error-secondary: #D9534F;
+  --dsw-alias-state-success-primary: #265B19;
+  --dsw-alias-state-success-secondary: #3E9B2E;
+  --dsw-alias-state-success-tertiary: #E8F3E2;
+  --dsw-alias-state-warn-primary: #B26A00;
+  --dsw-alias-state-warn-secondary: #E0A03A;
+  --dsw-alias-state-warn-tertiary: #FDF3E0;
+  --dsw-alias-state-warn-label: #8A5A00;
+  --dsw-alias-state-idle-primary: #DAD9D4;
+  --dsw-alias-code-diff-added: rgba(38, 91, 25, 0.08);
+  --dsw-alias-code-diff-deleted: rgba(180, 35, 31, 0.08);
+  --dsw-alias-file-diff-added-bg: #EDF6E7;
+  --dsw-alias-file-diff-added-gutter: #F5FAF1;
+  --dsw-alias-file-diff-added-marker: #3E9B2E;
+  --dsw-alias-file-diff-deleted-bg: #FBEAE7;
+  --dsw-alias-file-diff-deleted-gutter: #FDF1EF;
+  --dsw-alias-file-diff-deleted-marker: #B4231F;
+  --dsw-specific-bubble: #F0EEE6;
+  --dsw-specific-bubble-highlight: #E8E6DC;
+  --dsw-specific-input-major: #FFFFFF;
+  --dsw-specific-login-input: #F5F4ED;
+  --dsw-specific-selector: #F5F4ED;
+  --dsw-specific-sidebar-fill: #F5F4ED;
+  --dsw-specific-sidebar-nav-item-active: #E8E6DC;
+  --dsw-specific-sidebar-nav-item-active-accent: #F7E3DA;
+  --dsw-specific-sidebar-nav-item-hover: #F0EEE6;
+  --dsw-specific-tip: #F5F4ED;
+  --dsw-font-markdown-base: var(--dsh-content-font-size,14px) / calc(24px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-strong: 600 var(--dsh-content-font-size,14px) / calc(24px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-strong-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-italic: italic var(--dsh-content-font-size,14px) / calc(24px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-italic-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-strong-italic: italic 600 var(--dsh-content-font-size,14px) / calc(24px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-strong-italic-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h1: 700 calc(21px + var(--dsh-content-font-delta)) / calc(30px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h1-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h2: 700 calc(19px + var(--dsh-content-font-delta)) / calc(28px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h2-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h3: 700 calc(18px + var(--dsh-content-font-delta)) / calc(26px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h3-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h4: 600 var(--dsh-content-font-size,14px) / calc(24px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h4-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-table: var(--dsh-content-font-size-secondary,13px)/calc(22px + var(--dsh-content-font-delta-secondary,0px)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-table-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-table-head: 500 var(--dsh-content-font-size-secondary,13px)/calc(22px + var(--dsh-content-font-delta-secondary,0px)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-table-head-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small: 12px/20px var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-strong: 600 12px/20px var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-strong-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-italic: italic 12px/20px var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-italic-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-strong-italic: italic 600 12px/20px var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-strong-italic-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-family: "Anthropic Sans", "Anthropic Sans Variable", "Styrene B", "Styrene A", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --dsw-font-family-brand: "Anthropic Sans", "Anthropic Sans Variable", "Styrene B", "Styrene A", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --ds-font-family-code: ui-monospace, "Anthropic Mono", "SF Mono", SFMono-Regular, Menlo, "Roboto Mono", Consolas, "Liberation Mono", "PingFang SC", "Microsoft YaHei", monospace;
+  --dsh-content-font-size: 14px;
+  --dsh-content-font-delta: 0px;
+  --dsh-content-font-size-secondary: 13px;
+  --dsh-content-font-delta-secondary: 0px;
+}
+
+.dark {
+  --dsw-static-neutral-bluish-50: #FAF9F5;
+  --dsw-static-neutral-bluish-60: #F5F4ED;
+  --dsw-static-neutral-bluish-75: #F0EEE6;
+  --dsw-static-neutral-bluish-100: #EBE9E0;
+  --dsw-static-neutral-bluish-150: #E8E6DC;
+  --dsw-static-neutral-bluish-200: #E3E1D7;
+  --dsw-static-neutral-bluish-300: #DAD9D4;
+  --dsw-static-neutral-bluish-400: #B0AEA5;
+  --dsw-static-neutral-bluish-500: #9C9A92;
+  --dsw-static-neutral-bluish-600: #87867F;
+  --dsw-static-neutral-bluish-700: #73726C;
+  --dsw-static-neutral-bluish-750: #5E5D59;
+  --dsw-static-neutral-bluish-800: #3D3D3A;
+  --dsw-static-neutral-bluish-850: #2E2D2B;
+  --dsw-static-neutral-bluish-875: #262624;
+  --dsw-static-neutral-bluish-900: #1F1E1D;
+  --dsw-static-neutral-bluish-950: #141413;
+  --dsw-static-neutral-bluish-1000: #0F0E0D;
+  --dsw-static-neutral-bluish-00: #FFFFFF;
+  --dsw-static-neutral-50: #FAF9F5;
+  --dsw-static-neutral-100: #F5F4ED;
+  --dsw-static-neutral-150: #F2F0E8;
+  --dsw-static-neutral-200: #EBE9E0;
+  --dsw-static-neutral-250: #E3E1D7;
+  --dsw-static-neutral-300: #DAD9D4;
+  --dsw-static-neutral-400: #B0AEA5;
+  --dsw-static-neutral-500: #9C9A92;
+  --dsw-static-neutral-550: #8F8E86;
+  --dsw-static-neutral-600: #87867F;
+  --dsw-static-neutral-700: #55544E;
+  --dsw-static-neutral-800: #30302E;
+  --dsw-static-neutral-850: #1F1E1D;
+  --dsw-static-neutral-900: #141413;
+  --dsw-static-neutral-1000: #000000;
+  --dsw-static-neutral-00: #FFFFFF;
+  --dsw-static-deepseek-50: #FBF1EC;
+  --dsw-static-deepseek-100: #F7E3DA;
+  --dsw-static-deepseek-200: #F0CDBD;
+  --dsw-static-deepseek-300: #E8B39C;
+  --dsw-static-deepseek-400: #E0876A;
+  --dsw-static-deepseek-450: #DD8062;
+  --dsw-static-deepseek-500: #D97757;
+  --dsw-static-deepseek-600: #C6613F;
+  --dsw-static-deepseek-800: #8A4130;
+  --dsw-static-deepseek-900: #6B3226;
+  --dsw-static-deepseek-700-delete: #B0523A;
+  --dsw-static-blue-50: #FBF1EC;
+  --dsw-static-blue-75: #F7E7DE;
+  --dsw-static-blue-100: #F2D8CB;
+  --dsw-static-blue-300: #E8B39C;
+  --dsw-static-blue-400: #E0876A;
+  --dsw-static-blue-450: #DD8062;
+  --dsw-static-blue-500: #D97757;
+  --dsw-static-blue-600: #C6613F;
+  --dsw-static-blue-800: #8A4130;
+  --dsw-static-blue-900: #6B3226;
+  --dsw-static-blue-950: #3A1F14;
+  --dsw-static-blue-50p: #FBF1EC;
+  --dsw-alias-bg-base: #141413;
+  --dsw-alias-bg-layer-1: #30302E;
+  --dsw-alias-bg-layer-2: #30302E;
+  --dsw-alias-bg-layer-3: #3A3A38;
+  --dsw-alias-bg-overlay: #3A3A38;
+  --dsw-alias-bg-module-platform: #30302E;
+  --dsw-alias-bg-multi-select: #3A3A38;
+  --dsw-alias-bg-skeleton: rgba(222, 220, 209, 0.08);
+  --dsw-alias-bg-document-preview: #1F1E1D;
+  --dsw-alias-label-document-preview: #C2C0B6;
+  --dsw-alias-bg-document-selection: color-mix(in srgb, #D97757 40%, transparent);
+  --dsw-alias-bg-mask-1: rgba(0, 0, 0, 0.50);
+  --dsw-alias-bg-mask-2: rgba(0, 0, 0, 0.20);
+  --dsw-alias-bg-mask-3: rgba(0, 0, 0, 0.48);
+  --dsw-alias-bg-mask-photo: rgba(0, 0, 0, 0.88);
+  --dsw-alias-bg-mask-drop: rgba(48, 48, 46, 0.70);
+  --dsw-alias-border-l1: rgba(222, 220, 209, 0.08);
+  --dsw-alias-border-l2: rgba(222, 220, 209, 0.16);
+  --dsw-alias-border-l2-darkmode-thin: rgba(222, 220, 209, 0.10);
+  --dsw-alias-border-l3: rgba(222, 220, 209, 0.28);
+  --dsw-alias-border-l4: rgba(222, 220, 209, 0.40);
+  --dsw-alias-border-inverted: rgba(222, 220, 209, 0.10);
+  --dsw-alias-border-inverted2: rgba(222, 220, 209, 0.14);
+  --dsw-alias-brand-primary: #C6613F;
+  --dsw-alias-brand-primary-invert: #FAF9F5;
+  --dsw-alias-brand-text: #FAF9F5;
+  --dsw-alias-brand-primary-new-colorprimary-new-color: #E0876A;
+  --dsw-alias-state-business-primary: #E0876A;
+  --dsw-alias-state-business-tertiary: #4A2A20;
+  --dsw-alias-link: #E0876A;
+  --dsw-alias-label-primary: #FAF9F5;
+  --dsw-alias-label-primary-dimmed: #F5F4ED;
+  --dsw-alias-label-primary-bluish: #FAF9F5;
+  --dsw-alias-label-primary-foreground: #FFFFFF;
+  --dsw-alias-label-primary-inverted: #30302E;
+  --dsw-alias-label-secondary: #C2C0B6;
+  --dsw-alias-label-tertiary: #9C9A92;
+  --dsw-alias-label-caption: #87867F;
+  --dsw-alias-label-dimmed: #5E5D59;
+  --dsw-alias-label-shimmer: color-mix(in srgb, #FAF9F5 45%, transparent);
+  --dsw-alias-label-deep-diving: color-mix(in srgb, #E0876A 55%, #9C9A92);
+  --dsw-alias-label-deep-diving-shimmer: color-mix(in srgb, #E0876A 65%, #D97757);
+  --dsw-alias-button-contrast-fill: #FAF9F5;
+  --dsw-alias-button-elevated-fill: #3A3A38;
+  --dsw-alias-button-floating-fill: #30302E;
+  --dsw-alias-button-floating-hover: #3A3A38;
+  --dsw-alias-button-ghost-active-border: #6B6A64;
+  --dsw-alias-button-ghost-active-fill: #3A3A38;
+  --dsw-alias-button-ghost-active-hover: #45443F;
+  --dsw-alias-button-info-fill: #D97757;
+  --dsw-alias-button-info-hover: #E0876A;
+  --dsw-alias-button-primary-dimmed: #3A3A38;
+  --dsw-alias-button-primary-fill: #C6613F;
+  --dsw-alias-button-primary-hover: #D97757;
+  --dsw-alias-button-tool-bar-fill: rgba(48, 48, 46, 0.50);
+  --dsw-alias-button-tool-bar-fill-invisible: rgba(31, 31, 31, 0.36);
+  --dsw-alias-button-tool-bar-hover: rgba(48, 48, 46, 0.60);
+  --dsw-alias-interactive-bg-hover: rgba(222, 220, 209, 0.08);
+  --dsw-alias-interactive-bg-hover-solid: #30302E;
+  --dsw-alias-interactive-bg-hover-accent: rgba(224, 135, 106, 0.24);
+  --dsw-alias-interactive-bg-hover-danger: rgba(232, 140, 130, 0.16);
+  --dsw-alias-interactive-bg-active: rgba(222, 220, 209, 0.14);
+  --dsw-menu-surface-fill: rgba(48, 48, 46, 0.45);
+  --dsw-alias-menu-group-header-fill: rgba(38, 38, 36, 0.94);
+  --dsw-specific-menu: rgba(38, 38, 36, 0.94);
+  --dsw-alias-menu-icon: #F5F4ED;
+  --dsw-alias-tooltip-bg: #30302E;
+  --dsw-alias-tooltip-key-bg: color-mix(in srgb, #30302E, white 18%);
+  --dsw-alias-toast-bg: #3A3A38;
+  --dsw-alias-toast-label: #FAF9F5;
+  --dsw-alias-switch-thumb: #9C9A92;
+  --dsw-alias-turn-trigger-bg: rgba(222, 220, 209, 0.08);
+  --dsw-alias-turn-trigger-bg-hover: rgba(222, 220, 209, 0.14);
+  --dsw-alias-markdown-code-block: #1F1E1D;
+  --dsw-alias-markdown-code-block-banner: #262624;
+  --dsw-alias-markdown-code-segment-selected: #30302E;
+  --dsw-alias-markdown-code-segment-unselected: #1F1E1D;
+  --dsw-alias-markdown-inline-code: #262624;
+  --dsw-alias-markdown-citation: #30302E;
+  --dsw-alias-markdown-placeholder: #3A3A38;
+  --dsw-alias-markdown-tag: #3A3A38;
+  --dsw-alias-scrollbar-bg-l1: #45443F;
+  --dsw-alias-scrollbar-bg-l2: #55544E;
+  --dsw-alias-scrollbar-hover-l1: #6B6A64;
+  --dsw-alias-scrollbar-hover-l2: #6B6A64;
+  --dsw-alias-state-error-primary: #E88C82;
+  --dsw-alias-state-error-secondary: #D9534F;
+  --dsw-alias-state-success-primary: #7AB948;
+  --dsw-alias-state-success-secondary: #4ED17E;
+  --dsw-alias-state-success-tertiary: #22381A;
+  --dsw-alias-state-warn-primary: #E0A03A;
+  --dsw-alias-state-warn-secondary: #F7AD31;
+  --dsw-alias-state-warn-tertiary: #3A2E14;
+  --dsw-alias-state-warn-label: #E0A03A;
+  --dsw-alias-state-idle-primary: #55544E;
+  --dsw-alias-code-diff-added: rgba(122, 185, 72, 0.12);
+  --dsw-alias-code-diff-deleted: rgba(232, 140, 130, 0.12);
+  --dsw-alias-file-diff-added-bg: #1C2E17;
+  --dsw-alias-file-diff-added-gutter: #14230F;
+  --dsw-alias-file-diff-added-marker: #7AB948;
+  --dsw-alias-file-diff-deleted-bg: #3A1F1C;
+  --dsw-alias-file-diff-deleted-gutter: #2A1512;
+  --dsw-alias-file-diff-deleted-marker: #E88C82;
+  --dsw-specific-bubble: #30302E;
+  --dsw-specific-bubble-highlight: #3A3A38;
+  --dsw-specific-input-major: #30302E;
+  --dsw-specific-login-input: #1F1E1D;
+  --dsw-specific-selector: #30302E;
+  --dsw-specific-sidebar-fill: #262624;
+  --dsw-specific-sidebar-nav-item-active: #3A3A38;
+  --dsw-specific-sidebar-nav-item-active-accent: #4A2A20;
+  --dsw-specific-sidebar-nav-item-hover: #30302E;
+  --dsw-specific-tip: #30302E;
+  --dsw-font-markdown-base: var(--dsh-content-font-size,14px) / calc(24px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-strong: 600 var(--dsh-content-font-size,14px) / calc(24px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-strong-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-italic: italic var(--dsh-content-font-size,14px) / calc(24px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-italic-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-strong-italic: italic 600 var(--dsh-content-font-size,14px) / calc(24px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-base-strong-italic-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h1: 700 calc(21px + var(--dsh-content-font-delta)) / calc(30px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h1-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h2: 700 calc(19px + var(--dsh-content-font-delta)) / calc(28px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h2-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h3: 700 calc(18px + var(--dsh-content-font-delta)) / calc(26px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h3-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h4: 600 var(--dsh-content-font-size,14px) / calc(24px + var(--dsh-content-font-delta)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-h4-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-table: var(--dsh-content-font-size-secondary,13px)/calc(22px + var(--dsh-content-font-delta-secondary,0px)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-table-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-table-head: 500 var(--dsh-content-font-size-secondary,13px)/calc(22px + var(--dsh-content-font-delta-secondary,0px)) var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-table-head-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small: 12px/20px var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-strong: 600 12px/20px var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-strong-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-italic: italic 12px/20px var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-italic-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-strong-italic: italic 600 12px/20px var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-markdown-small-strong-italic-font-family: var(--dcl-prose-font, "Anthropic Serif", "Anthropic Serif Variable", "Tiempos Text", "Tiempos", ui-serif, Georgia, Cambria, "Source Serif 4", "Songti SC", SimSun, serif);
+  --dsw-font-family: "Anthropic Sans", "Anthropic Sans Variable", "Styrene B", "Styrene A", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --dsw-font-family-brand: "Anthropic Sans", "Anthropic Sans Variable", "Styrene B", "Styrene A", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --ds-font-family-code: ui-monospace, "Anthropic Mono", "SF Mono", SFMono-Regular, Menlo, "Roboto Mono", Consolas, "Liberation Mono", "PingFang SC", "Microsoft YaHei", monospace;
+  --dsh-content-font-size: 14px;
+  --dsh-content-font-delta: 0px;
+  --dsh-content-font-size-secondary: 13px;
+  --dsh-content-font-delta-secondary: 0px;
+}
+
+.panel h1 { font-size: 14px; font-weight: 500; letter-spacing: .05em; text-transform: uppercase;
+            color: var(--dsw-alias-label-tertiary); margin: 0 0 20px;
+            border-bottom: .5px solid var(--dsw-alias-border-l2); padding-bottom: 10px; }
+.panel h2 { font: var(--dsw-font-markdown-h2); margin: 20px 0 10px; }
+.label { font: 11px/16px var(--dsw-font-family); letter-spacing: .06em; text-transform: uppercase;
+         margin: 18px 0 6px; color: var(--dsw-alias-label-tertiary); }
+.label code { font: 11px var(--ds-font-family-code); text-transform: none; letter-spacing: 0;
+              background: var(--dsw-alias-markdown-inline-code); padding: 1px 5px; border-radius: 4px; }
+.ui { font: 14px/22px var(--dsw-font-family); margin: 0; }
+.prose { font: var(--dsw-font-markdown-base); margin: 0; }
+.secondary { color: var(--dsw-alias-label-secondary); }
+.tertiary { color: var(--dsw-alias-label-tertiary); }
+.markdown { font: var(--dsw-font-markdown-base); }
+.markdown p { margin: 11px 0; }
+.markdown ul { margin: 11px 0; padding-left: 22px; }
+.markdown code { font: var(--dsw-font-markdown-code); background: var(--dsw-alias-markdown-inline-code);
+                 padding: 1px 5px; border-radius: 4px; }
+.markdown pre { background: var(--dsw-alias-markdown-code-block); border-radius: 8px;
+                padding: 12px 14px; margin: 11px 0; overflow: hidden; }
+.markdown pre code { font: var(--dsw-font-markdown-code-block); background: none; padding: 0; }
+.markdown table { border-collapse: collapse; width: 100%; font: var(--dsw-font-markdown-table); }
+.markdown th { font: var(--dsw-font-markdown-table-head); text-align: left; }
+.markdown th, .markdown td { border-bottom: .5px solid var(--dsw-alias-border-l2); padding: 6px 8px; }
+.sample::after { content: "The quick brown fox jumps over the lazy dog — 0123456789"; }
+</style></head>
+<body>
+
+  <section class="panel light">
+    <h1>Claude light</h1>
+
+    <p class="label">UI / sans · <code>--dsw-font-family</code></p>
+    <p class="ui">Chrome keeps the UI face: <strong>strong</strong>, <em>emphasis</em>,
+      <span class="secondary">secondary</span>, <span class="tertiary">tertiary</span>.</p>
+    <p class="ui sample"></p>
+
+    <p class="label">Transcript / editorial · <code>--dsw-font-markdown-base</code></p>
+    <div class="markdown">
+      <h2>Markdown h2 in the transcript face</h2>
+      <p>Assistant prose is the one place Claude switches voice. Headings, paragraphs, lists and
+      tables inherit the same editorial family, while sizes and line-heights stay on DSH's shipped
+      scale so nothing reflows. Inline <code>--dsw-alias-*</code> names stay in mono.</p>
+      <ul><li>List item in the prose face</li><li>Second item</li></ul>
+      <table>
+        <thead><tr><th>Token</th><th>Role</th></tr></thead>
+        <tbody>
+          <tr><td>--dsw-alias-bg-base</td><td>page canvas</td></tr>
+          <tr><td>--dsw-alias-brand-primary</td><td>solid accent</td></tr>
+        </tbody>
+      </table>
+      <pre><code>const accent = '#D97757'; // brand accent</code></pre>
+    </div>
+    <p class="label">Transcript sample</p>
+    <p class="prose sample"></p>
+  </section>
+
+  <section class="panel dark">
+    <h1>Claude dark</h1>
+
+    <p class="label">UI / sans · <code>--dsw-font-family</code></p>
+    <p class="ui">Chrome keeps the UI face: <strong>strong</strong>, <em>emphasis</em>,
+      <span class="secondary">secondary</span>, <span class="tertiary">tertiary</span>.</p>
+    <p class="ui sample"></p>
+
+    <p class="label">Transcript / editorial · <code>--dsw-font-markdown-base</code></p>
+    <div class="markdown">
+      <h2>Markdown h2 in the transcript face</h2>
+      <p>Assistant prose is the one place Claude switches voice. Headings, paragraphs, lists and
+      tables inherit the same editorial family, while sizes and line-heights stay on DSH's shipped
+      scale so nothing reflows. Inline <code>--dsw-alias-*</code> names stay in mono.</p>
+      <ul><li>List item in the prose face</li><li>Second item</li></ul>
+      <table>
+        <thead><tr><th>Token</th><th>Role</th></tr></thead>
+        <tbody>
+          <tr><td>--dsw-alias-bg-base</td><td>page canvas</td></tr>
+          <tr><td>--dsw-alias-brand-primary</td><td>solid accent</td></tr>
+        </tbody>
+      </table>
+      <pre><code>const accent = '#D97757'; // brand accent</code></pre>
+    </div>
+    <p class="label">Transcript sample</p>
+    <p class="prose sample"></p>
+  </section>
+</body></html>

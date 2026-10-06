@@ -1,0 +1,15 @@
+# Development overlay: pin light, and switch the assistant's prose back to the UI
+# sans face to prove the host half's `serifResponses` option reaches the browser.
+# Boot with:
+#   dsh --profile web --patch dev/sans.patch.yml --no-open --port 8099
+#
+# These are id-targeted config overrides, not inserts: the theme row comes from
+# this package's bundle patch.
+- id: theme-claude
+  name: dsh-plugin-claude-theme
+  config:
+    serifResponses: false
+- id: ui-theme
+  name: '@deepseek-ai/dsh-client-ui-theme'
+  config:
+    preference: light

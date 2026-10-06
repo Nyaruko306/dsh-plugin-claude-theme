@@ -1,0 +1,10 @@
+node_modules/
+
+# DSH writes these beside a profile's package.json, not in a plugin package,
+# but a checkout used as a profile link can accumulate them.
+.plugin-manager/
+*.log
+
+# This package has one devDependency; a lockfile is noise.
+pnpm-lock.yaml
+package-lock.json

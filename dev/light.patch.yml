@@ -1,0 +1,10 @@
+# Development overlay: pin the built-in palette to light so Claude's light values
+# can be inspected. Boot with:
+#   dsh --profile web --patch dev/light.patch.yml --no-open --port 8099
+#
+# It only overrides config — the theme row itself comes from this package's
+# bundle patch, so the overlay must not insert a second row with the same id.
+- id: ui-theme
+  name: '@deepseek-ai/dsh-client-ui-theme'
+  config:
+    preference: light

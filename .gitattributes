@@ -1,0 +1,11 @@
+# Normalize line endings; the committed browser bundle and Windows-authored
+# docs must survive a checkout on any platform.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.woff2 binary
+
+# Generated artifacts: present so DSH can serve them, but not reviewable by hand.
+lib/client.js linguist-generated=true
+docs/specimen.html linguist-generated=true

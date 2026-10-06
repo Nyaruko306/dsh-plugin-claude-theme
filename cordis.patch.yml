@@ -1,0 +1,13 @@
+# Bundle layer for dsh-plugin-claude-theme.
+#
+# DSH applies this patch when the package is selected in a profile's
+# `dsh.profile.bundles`, which `dsh plugin --profile <profile> add
+# dsh-plugin-claude-theme` does automatically. The row names this same package,
+# so the host half and the `dsh.client` browser bundle come from one install.
+- insert:
+    - id: theme-claude
+      name: dsh-plugin-claude-theme
+      config:
+        # Claude's transcript voice is the editorial serif face. Set false to
+        # keep the whole UI in the single sans face.
+        serifResponses: true

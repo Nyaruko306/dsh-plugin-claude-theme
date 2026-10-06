@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dev dependencies
+        run: npm install --no-audit --no-fund
+
+      # DSH serves lib/client.js directly and pnpm blocks install-time build
+      # scripts, so the bundle is committed. This proves it is not stale.
+      - name: Rebuild the browser bundle
+        run: npm run build
+
+      - name: Committed bundle matches tokens.mjs
+        run: git diff --exit-code -- lib/client.js
+
+      - name: Package consistency
+        run: npm run check
